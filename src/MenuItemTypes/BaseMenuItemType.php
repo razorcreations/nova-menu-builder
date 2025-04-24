@@ -2,6 +2,8 @@
 
 namespace Outl1ne\MenuBuilder\MenuItemTypes;
 
+use Laravel\Nova\Fields\Number;
+
 abstract class BaseMenuItemType
 {
     /**
@@ -109,6 +111,8 @@ abstract class BaseMenuItemType
      */
     public static function getFields(): array
     {
-        return [];
+        return [
+			Number::make('column'),
+		];
     }
 }
